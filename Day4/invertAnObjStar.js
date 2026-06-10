@@ -1,0 +1,20 @@
+/**
+ * Problem 19: Invert an Object  [Easy]
+Description: Write a function invertObject(obj) that swaps the keys and values of an object.
+Example:
+Input: {a: 1, b: 2}  → Output: {1: 'a', 2: 'b'}
+Hint: Use Object.entries() and reduce().
+
+ */
+//Object.entries() is a JavaScript method that converts an object into an array of [key, value] pairs.
+
+function invertObject(obj){
+ const results = Object.entries(obj).reduce((acc, [Key,value])=> {
+  acc[value] = Key
+  return acc
+ }, {})
+ return results
+ 
+} 
+
+console.log(invertObject({a: 1, b: 2}));
