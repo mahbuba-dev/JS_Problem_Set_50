@@ -17,4 +17,6 @@ function invertObject(obj){
  
 } 
 
+
+
 console.log(invertObject({a: 1, b: 2}));

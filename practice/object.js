@@ -93,3 +93,56 @@ const obj = {
 const array = Object.entries(obj).flat(Infinity)
 
 console.log(array);
+
+
+
+/**
+ * 7. Find the Largest Value
+const prices = {
+  apple: 3,
+  banana: 1,
+  orange: 5
+};
+
+Task: Find the largest value.
+output - prices = {
+orange:5}
+ */
+
+const prices = {
+  apple: 3,
+  banana: 1,
+  orange: 5
+};
+
+function findLargestValue(obj){
+  
+  const valuesArray = Object.values(obj)
+  let largest = valuesArray[0]
+  for(const value of valuesArray){
+    if(largest<value){
+      largest = value
+    }
+    else{
+      largest = largest
+    }
+  }
+return largest
+}
+
+
+console.log(findLargestValue(prices));
+
+
+// shorter modern way find largest
+const prices2 = {
+  apple: 3,
+  banana: 1,
+  orange: 6
+};
+
+function findLargest2(obj){
+  return Math.max(...Object.values(obj))
+}
+
+console.log(findLargest2(prices2));
