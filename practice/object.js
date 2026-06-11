@@ -66,3 +66,30 @@ function sumAllValues (obj){
   return count
 }
 console.log(sumAllValues(scores));
+
+
+
+/**
+ * Convert Object to Array
+const obj = {
+  a: 1,
+  b: 2
+};
+
+Task: Convert it to:
+
+[
+  ["a", 1],
+  ["b", 2]
+]
+ */
+
+
+const obj = {
+  a: 1,
+  b: 2
+};
+
+const array = Object.entries(obj).flat(Infinity)
+
+console.log(array);
